@@ -11,7 +11,33 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix
+    .styles(
+        [
+            'resources/views/LDXPS/css/style.css' 
+        ],
+        'public/LDXPS/css/styleCss.css'
+    )
+    .sass   (
+        'resources/views/LDXPS/scss/styleCuston.scss',
+        'public/LDXPS/css/styleSass.css'
+    )
+    .scripts(
+        'node_modules/jquery/dist/jquery.js',   
+        'public/LDXPS/js/jquery.js'
+    )    
+    .scripts(
+        'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+        'public/LDXPS/js/bootstrap.js'
+    )
+    .scripts(
+        'node_modules/feather-icons/dist/feather.js',
+        'public/LDXPS/js/feather.js'
+    )  
+    .scripts(
+        [
+            'resources/views/LDXPS/js/script.js',
+        ],
+        'public/LDXPS/js/scripts.js'
+    )  
+    .version();
