@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('start');
 });
+Route::get('/home', function () {
+    return view('LDXPS.home');
+})->name('home');
