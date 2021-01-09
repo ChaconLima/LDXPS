@@ -14,12 +14,12 @@ const mix = require('laravel-mix');
 mix
     .styles(
         [
-            'resources/views/LDXPS/css/style.css' 
+            'resources/views/LDXPS/layout/css/style.css' 
         ],
         'public/LDXPS/css/styleCss.css'
     )
     .sass   (
-        'resources/views/LDXPS/scss/styleCuston.scss',
+        'resources/views/LDXPS/layout/scss/styleCuston.scss',
         'public/LDXPS/css/styleSass.css'
     )
     .scripts(
@@ -36,7 +36,7 @@ mix
     )  
     .scripts(
         [
-            'resources/views/LDXPS/js/script.js',
+            'resources/views/LDXPS/layout/js/script.js',
         ],
         'public/LDXPS/js/scripts.js'
     )  

@@ -22,20 +22,20 @@
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
           <div class="position-sticky pt-3">
             <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+              <li class="nav-item nav-item">
+                <a class="nav-link {{(Route::current()->getname()==='home' ? 'active':'')}}" aria-current="page" href="{{route('home')}}">
                   <span data-feather="home"></span>
                   Home
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li class="nav-item nav-item">
+                <a class="nav-link {{(Route::current()->getname()==='vendors.index' ? 'active':'')}}" href="{{route('vendors.index') }}">
                   <span data-feather="file"></span>
                   Vendedores
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li class="nav-item nav-item">
+                <a class="nav-link {{(Route::current()->getname()==='customers.index' ? 'active':'')}}" href="{{route('customers.index') }}">
                   <span data-feather="users"></span>
                   Clientes
                 </a>

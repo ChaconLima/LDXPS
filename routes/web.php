@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LDXPS\CustomersController;
+use App\Http\Controllers\LDXPS\VendorsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,5 +19,8 @@ Route::get('/', function () {
     return view('start');
 });
 Route::get('/home', function () {
-    return view('LDXPS.home');
+    return view('LDXPS.home.index');
 })->name('home');
+
+Route::resource('/customers', CustomersController::class);
+Route::resource('/vendors', VendorsController::class);

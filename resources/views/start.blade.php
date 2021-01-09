@@ -33,8 +33,8 @@
         </div>
         <div class="col-4">
             <div class="row">
-                <p>Prova para Processo Seletivo Landix- 2021</p>
-                <p>Desenvolvido por Mateus de Chacon</p>
+                <p>Prova para o Processo Seletivo Landix- 2021</p>
+                <p>Desenvolvido por Mateus Chacon</p>
                 <p>Links de Perfil: </p>
                 <a href="https://linkedin.com/in/mateuschacon"> Linkedin </a>
                 <a href="https://github.com/ChaconLima"> Github </a>
