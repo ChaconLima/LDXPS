@@ -8,21 +8,33 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 
-class Vendor extends Model
+class Customer extends Model
 {
     use Uuid;
     use HasFactory,Notifiable;
 
-    protected $table = 'vendors';
-    protected $primaryKey = 'CDVEND';
+    protected $table = 'customers';
+    protected $primaryKey = 'CDCL';
 
     protected $fillable = [
         'DSNOME',
-        'CDTAB',
+        'IDTIPO',
+        'DSLIM',
         'created_at',
         'updated_at',
     ];
 
+    //===============Por Padrão PF ===========================
+    public function setIDTIPOAttribute($value)
+    {
+        $this->attributes["IDTIPO"] = $value;
+        if($this->attributes["IDTIPO"]=="" or $this->attributes["IDTIPO"]==null)
+        {
+            $this->attributes["IDTIPO"] = "PF";
+        }
+    }
+
+    //===============Geração GUID ===========================
     protected $guarded = [];
     protected static function boot()
     {
@@ -42,8 +54,8 @@ class Vendor extends Model
         return 'string';
     }
 
-    public function customers(){
-        return $this->hasMany(Customer::class, 'CDVEND' , 'CDVEND' );
+    //=============== Relacionamento de tabela ===========================
+    public function vendor(){
+        return $this->belongsTo(Vendor::class, 'CDVEND' , 'CDVEND' );
     }
-    
 }

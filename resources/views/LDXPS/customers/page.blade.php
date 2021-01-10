@@ -5,7 +5,7 @@
   <div class="container">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
       <h1 class="h2">Lista de Clientes</h1>
-      <button type="button" class="btn btn-dark btn-sm"> Adicionar Cliente</button>
+      {{-- <button type="button" class="btn btn-dark btn-sm"> Adicionar Cliente</button> --}}
     </div>
     @include('LDXPS.customers.table')
   </div>

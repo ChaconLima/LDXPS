@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\LDXPS;
 
 use App\Http\Controllers\Controller;
+use App\Models\LDXPS\Customer;
 use Illuminate\Http\Request;
 
 class CustomersController extends Controller
@@ -14,7 +15,8 @@ class CustomersController extends Controller
      */
     public function index()
     {
-        return view('LDXPS.customers.page');
+        $customers = Customer::paginate(8);
+        return view('LDXPS.customers.page', compact('customers'))->with('i', (request()->input('page', 1) - 1) * 8);
     }
 
     /**
@@ -46,7 +48,7 @@ class CustomersController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -80,6 +82,10 @@ class CustomersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+    }
+    public function destroyRouteVendor($id)
+    {
+        
     }
 }

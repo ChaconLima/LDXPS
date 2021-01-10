@@ -14,10 +14,10 @@ class CreateVendorsTable extends Migration
     public function up()
     {
         Schema::create('vendors', function (Blueprint $table) {
-            $table->uuid('CDVEND', 36)->primary();
-            $table->string('DSNOME', 50);
-            $table->integer('CDTAB');
-            $table->date('DTNASC');
+            $table->uuid('CDVEND', 36)->comment('Código do Vendedor')->primary();
+            $table->string('DSNOME', 50)->comment('Nome do Vendedor');
+            $table->integer('CDTAB')->comment('Código da tabela de preços padrão');
+            $table->date('DTNASC')->comment('Data de Nascimento');
             $table->timestamps();
         });
     }

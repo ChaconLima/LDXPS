@@ -13,8 +13,10 @@
   </head>
   <body>
     
-    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Sistema LDXPS</a>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow text-center">
+      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="{{route('home')}}">
+        Home
+      </a>
     </header>
     
     <div class="container-fluid">
@@ -23,22 +25,38 @@
           <div class="position-sticky pt-3">
             <ul class="nav flex-column">
               <li class="nav-item nav-item">
-                <a class="nav-link {{(Route::current()->getname()==='home' ? 'active':'')}}" aria-current="page" href="{{route('home')}}">
-                  <span data-feather="home"></span>
-                  Home
-                </a>
+
+                  <a class="nav-link dropdown-toggle {{(Route::current()->getname()==='vendors.index' ? 'active':'')}}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span data-feather="shopping-bag"></span>
+                    Vendedores(as)
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="{{route('vendors.index')}}">
+                      <span data-feather="database"></span>
+                      Todos Vendedores
+                    </a></li>
+                    
+                    <li><a class="dropdown-item" href="#"> 
+                      <span data-feather="user-plus"></span>
+                      Adicionar Vendedor(a)
+                    </a></li>
+
+                  </ul>
+      
               </li>
               <li class="nav-item nav-item">
-                <a class="nav-link {{(Route::current()->getname()==='vendors.index' ? 'active':'')}}" href="{{route('vendors.index') }}">
-                  <span data-feather="file"></span>
-                  Vendedores
-                </a>
-              </li>
-              <li class="nav-item nav-item">
-                <a class="nav-link {{(Route::current()->getname()==='customers.index' ? 'active':'')}}" href="{{route('customers.index') }}">
-                  <span data-feather="users"></span>
-                  Clientes
-                </a>
+
+                  <a class="nav-link dropdown-toggle {{(Route::current()->getname()==='customers.index' ? 'active':'')}}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span data-feather="users"></span>
+                    Clientes
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="{{route('customers.index')}}">
+                      <span data-feather="database"></span>
+                      Todos Clientes
+                    </a></li>
+                  </ul>
+      
               </li>
             </ul>
           </div>

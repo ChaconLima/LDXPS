@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\LDXPS\Customer;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\LDXPS\Vendor::factory(10)->create();
+        
+        
+        \App\Models\LDXPS\Vendor::factory(10)
+                                    ->has(Customer::factory(15))
+                                    ->create();
+
     }
 }

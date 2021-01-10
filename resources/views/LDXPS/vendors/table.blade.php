@@ -5,9 +5,7 @@
         <tr>
           <th>#</th>
           <th>Nome</th>
-          <th>Selecionar</th>
-          <th>Editar</th>
-          <th>Excluir</th>
+          <th>Opções</th>
         </tr>
       </thead>
       
@@ -17,25 +15,14 @@
             <td class="col-2"> {{++$i}} </td>
             <td class="col-8" >{{$vendor['DSNOME']}}</td>
             <td class="col-12">
-              <button type="button" class="btn btn-dark btn-sm"> 
-                Clientes 
-              </button>
-            </td>
-            <td>
-              <a type="button" class="btn btn-warning btn-sm" href="">
-                <span data-feather="edit"></span>
-              </a>
-            </td>
-            <td>
-             
-              <form action="{{route('vendors.destroy',$vendor['CDVEND']) }}" method="POST">
+              <form action="{{route('vendors.show',$vendor['CDVEND']) }}" method="GET">
                 
-                @csrf
-                @method('DELETE')
-                <button type="submit" title="delete" type="button" class="btn btn-danger btn-sm">
-                  <span data-feather="trash-2"></span>
+                <button type="submit" title="delete" type="button" class="btn btn-dark btn-sm">
+                  <span data-feather="check"></span>
+                  Selecionar
                 </button>
               </form>
+
             </td>
           </tr>
         @endforeach
@@ -47,11 +34,17 @@
 
           @if ($vendors->onFirstPage())
             <li class="page-item col-2">
-              <a class="btn btn-info btn-sm disabled">Anterior</a>
+              <a class="btn btn-dark btn-sm disabled">
+                <span data-feather="chevrons-left"></span>
+                Anterior
+              </a>
             </li>
           @else
             <li class="page-item col-2">
-              <a class="btn btn-info btn-sm" href="{{ $vendors->previousPageUrl() }}">Anterior</a>
+              <a class="btn btn-dark btn-sm" href="{{ $vendors->previousPageUrl() }}">
+                <span data-feather="chevrons-left"></span>
+                Anterior
+              </a>
             </li>
           @endif
           <li class="page-item col-2">
@@ -59,11 +52,17 @@
           </li>
           @if ($vendors->hasMorePages())
             <li class="page-item">
-              <a class="btn btn-info btn-sm" href="{{ $vendors->nextPageUrl() }}">Próxima</a>
+              <a class="btn btn-dark btn-sm" href="{{ $vendors->nextPageUrl() }}">
+                Próxima
+                <span data-feather="chevrons-right"></span>
+              </a>
             </li>
           @else
             <li class="page-item">
-              <a class="btn btn-info btn-sm disabled">Próxima</a>
+              <a class="btn btn-dark btn-sm disabled">
+                Próxima
+                <span data-feather="chevrons-right"></span>
+              </a>
             </li>
           @endif
         </ul>
