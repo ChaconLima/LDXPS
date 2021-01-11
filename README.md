@@ -1,11 +1,42 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+
+## Passos para Inicializar o Projeto
+
+1 - Baixar as dependências do projeto com comando:
+    
+    composer install
+
+2 - Criar o aquivo .env no projeto:
+
+    cp .env.example .env
+    
+3 - Configurar o Projeto no arquivo .env
+
+    APP_NAME=Laravel
+    APP_ENV=local
+    APP_URL=http://localhost
+
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=laravel
+    DB_USERNAME=root
+    DB_PASSWORD=
+
+4 - Geração da Key, presente no arquivo .env com o comando:
+
+    php artisan key:generate
+
+5 - Executar a migration com o seguinte comando: 
+    
+    php artisan migrate
+
+6 - Servidor HTTP na porta 8000:
+
+    php artisan serve
+
+
 
 ## About Laravel
 
