@@ -32,7 +32,7 @@
     
     php artisan migrate
 
-6 - Passo opcional, que gerar informações "fakes", para abastercer as tabelas do banco de dados:
+6 - Passo opcional, que é gerar informações "fakes", para abastercer as tabelas do banco de dados:
 
     php artisan db:seed
 
