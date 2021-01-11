@@ -90,18 +90,19 @@
             <div>
               <button class="btn btn-primary" type="submit">
                 <span data-feather="upload-cloud"></span>
-                Atualizar as Informações
+                Confirmar
               </button>
 
-              <a href="{{route('vendors.create')}}" class="btn btn-success" >
-                <span data-feather="user-plus"></span>
-                Criar um Novo Vendedor
-              </a>
                   <!-- Button to Open the Modal -->
               <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <span data-feather="user-x"></span>
-                Excluir Cliente(a)
+                Excluir
               </button>
+              
+              <a href="{{route('vendors.create')}}" class="btn btn-success" >
+                <span data-feather="user-plus"></span>
+                Criar Vendedor
+              </a>
             </div>
 
             </form>

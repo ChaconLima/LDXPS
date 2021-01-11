@@ -4,7 +4,7 @@
 <div class="container">
     <main>
       <div class="py-5 text-center">
-      <h2> Cadastrar um novo Cliente </h2>
+      <h2> Cadastrar Cliente </h2>
       <div class="row g-3">
         <div class="col-md-7 col-lg-12">
             <hr class="featurette-divider">
@@ -68,7 +68,7 @@
               </div>
             </div>
   
-            <button class="btn btn-primary btn-lg" type="submit"><span data-feather="upload-cloud"></span>Cadastrar as Informações</button>
+            <button class="btn btn-primary btn-lg" type="submit"><span data-feather="upload-cloud"></span>Confirmar</button>
           </form>
         </div>
       </div>

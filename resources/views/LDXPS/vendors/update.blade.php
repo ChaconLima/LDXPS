@@ -44,7 +44,7 @@
               </div>
 
               <div class="col-sm-6">
-                <label for="firstName" class="form-label">Data de Aniversário</label>
+                <label for="firstName" class="form-label">Data de Nascimento</label>
                 <input 
                     name="DTNASC"
                     type="date" 
@@ -57,15 +57,14 @@
               </div>
 
               <div class="col-sm-6">
+                <button class="btn btn-primary" type="submit">
+                  <span data-feather="upload-cloud"></span>
+                  Confirmar
+                </button>
                 <!-- Button to Open the Modal -->
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <span data-feather="user-x"></span>
-                    Excluir Vendedor(a)
-                </button>
-
-                <button class="btn btn-primary" type="submit">
-                    <span data-feather="upload-cloud"></span>
-                    Alterar Cadastro
+                    Excluir
                 </button>
               </div>
   
@@ -74,7 +73,7 @@
           </form>
           <a  class="btn btn-success btn-lg" href="{{route('customers.create')}}">
             <span data-feather="user-plus"></span>
-             Adicionar Cliente
+             Criar Cliente
           </a>
         </div>
       </div>

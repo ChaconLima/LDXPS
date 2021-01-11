@@ -38,7 +38,7 @@
                       
                       <li><a class="dropdown-item" href="{{route('vendors.create')}}"> 
                         <span data-feather="user-plus"></span>
-                        Adicionar Vendedor(a)
+                        Criar Vendedor
                       </a></li>
 
                     </ul>
@@ -58,7 +58,7 @@
                       </a></li>
                       <li><a class="dropdown-item" href="{{route('customers.create')}}">
                         <span data-feather="user-plus"></span>
-                        Adicionar Cliente
+                        Criar Cliente
                       </a></li>
                     </ul>
         
