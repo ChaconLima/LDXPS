@@ -32,7 +32,11 @@
     
     php artisan migrate
 
-6 - Servidor HTTP na porta 8000:
+6 - Passo opcional, que gerar informações "fakes", para abastercer as tabelas do banco de dados:
+
+    php artisan db:seed
+
+7 - Servidor HTTP na porta 8000:
 
     php artisan serve
 
