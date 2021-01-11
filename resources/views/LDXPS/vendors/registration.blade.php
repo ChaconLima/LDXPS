@@ -29,7 +29,7 @@
               </div>
 
               <div class="col-sm-6">
-                <label for="firstName" class="form-label">Código da Tablea de Preço </label>
+                <label for="firstName" class="form-label">Código da Tabela de Preço </label>
                 <input 
                     name="CDTAB"
                     type="text" 
@@ -44,7 +44,7 @@
               </div>
 
               <div class="col-sm-6">
-                <label for="firstName" class="form-label">Data de Aniversário</label>
+                <label for="firstName" class="form-label">Data de Nascimento</label>
                 <input 
                     name="DTNASC"
                     type="date" 

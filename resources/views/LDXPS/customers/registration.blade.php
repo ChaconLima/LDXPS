@@ -4,7 +4,7 @@
 <div class="container">
     <main>
       <div class="py-5 text-center">
-      <h2> Cadastrar um novo Clinte </h2>
+      <h2> Cadastrar um novo Cliente </h2>
       <div class="row g-3">
         <div class="col-md-7 col-lg-12">
             <hr class="featurette-divider">
