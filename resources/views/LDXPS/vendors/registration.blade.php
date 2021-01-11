@@ -69,8 +69,8 @@
   
               </div>
             </div>
-  
-            <button class="btn btn-primary btn-lg" type="submit">Cadastrar as Informações</button>
+            
+            <button class="btn btn-primary btn-lg" type="submit"><span data-feather="upload-cloud"></span>Cadastrar as Informações</button>
           </form>
         </div>
       </div>

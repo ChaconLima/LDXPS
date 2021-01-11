@@ -49,7 +49,7 @@ class VendorsController extends Controller
         Vendor::create($vendor);
 
         return redirect()->route('vendors.index')
-            ->with('success', 'Vendedor Criado com Sucesso.');
+            ->with('success', 'Vendedor Criado com Sucesso!!');
     }
 
     /**
@@ -75,9 +75,9 @@ class VendorsController extends Controller
     public function edit($id)
     {
         $vendor=Vendor::find($id);
-        $customers = $vendor->customers()->paginate(3);
+        $customers = $vendor->customers()->paginate(2);
 
-        return view('LDXPS.vendors.update', compact(['vendor','customers']))->with('i', (request()->input('page', 1) - 1) * 3);
+        return view('LDXPS.vendors.update', compact(['vendor','customers']))->with('i', (request()->input('page', 1) - 1) * 2);
     }
 
     /**

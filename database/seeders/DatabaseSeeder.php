@@ -16,8 +16,8 @@ class DatabaseSeeder extends Seeder
     {
         
         
-        \App\Models\LDXPS\Vendor::factory(5)
-                                    ->has(Customer::factory(10))
+        \App\Models\LDXPS\Vendor::factory(10)
+                                    ->has(Customer::factory(13))
                                     ->create();
 
     }

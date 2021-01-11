@@ -72,15 +72,16 @@
               </div>
             </div>
           </form>
-         
-          <a hrf="#" type="button" class="btn btn-success btn-lg">
+          <a  class="btn btn-success btn-lg" href="{{route('customers.create')}}">
             <span data-feather="user-plus"></span>
-             Adicionar Cliente para esse Vendedor(a)
+             Adicionar Cliente
           </a>
         </div>
       </div>
     </main>
-    <hr class="featurette-divider">
+    
+    Clientes do Vendedor(a):
+    @include('LDXPS.customers.table')
   </div>
 
   

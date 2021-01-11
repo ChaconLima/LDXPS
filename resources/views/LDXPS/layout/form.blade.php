@@ -11,7 +11,7 @@
   </head>
   <body>
     <header class="navbar navbar-dark  bg-dark flex-md-nowrap p-0 shadow text-center">
-      <a class="bnt navbar-brand col-md-3 col-lg-2 me-0 px-3" href="{{route('home')}}">
+      <a class="bnt navbar-brand col-md-3 col-lg-2 me-0 px-3" href="javascript:history.back()">
         <span data-feather="arrow-left-circle"></span>
         Home
       </a>

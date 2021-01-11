@@ -5,9 +5,9 @@
         <tr>
           <th>#</th>
           <th>Nome</th>
-          <th>Tipo de Cliente</th>
-          <th>Limete de Crédito (R$)</th>
-          @if ((Route::current()->getname() =='vendors.show'))
+          @if ((Route::current()->getname() != 'vendors.edit'))
+            <th>Tipo de Cliente</th>
+            <th>Limete de Crédito (R$)</th>
             <th>
               Opções
             </th>
@@ -19,13 +19,14 @@
         <tr>
           <td class="col-2">{{++$i}}</td>
           <td class="col-4">{{$customer->DSNOME}}</td>
-          <td>{{$customer->IDTIPO}}</td>
-          <td>{{$customer->DSLIM}}</td>
-          @if ((Route::current()->getname() =='vendors.show'))
+          @if ((Route::current()->getname() !='vendors.edit'))
+            <td>{{$customer->IDTIPO}}</td>
+            <td>{{$customer->DSLIM}}</td>
+          
             <td>
-              <button type="button" class="btn btn-warning btn-sm">
+              <a href="{{route('customers.edit',$customer->CDCL)}}"" type="button" class="btn btn-warning btn-sm">
                 <span data-feather="edit"></span> Editar Cliente
-              </button>
+              </a>
             </td>
           @endif
         </tr>

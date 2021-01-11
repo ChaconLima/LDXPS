@@ -28,7 +28,8 @@
         @endforeach
       </tbody>
     </table>
-  
+    
+    
       <nav aria-label="...">
         <ul class="pagination">
 

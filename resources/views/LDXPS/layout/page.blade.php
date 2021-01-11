@@ -28,7 +28,7 @@
 
                     <a class="nav-link dropdown-toggle {{(Route::current()->getname()==='vendors.index' ? 'active':'')}}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <span data-feather="shopping-bag"></span>
-                      Vendedores(as)
+                      Vendedores
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="{{route('vendors.index')}}">
@@ -50,10 +50,15 @@
                       <span data-feather="users"></span>
                       Clientes
                     </a>
+                   
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="{{route('customers.index')}}">
                         <span data-feather="database"></span>
                         Todos Clientes
+                      </a></li>
+                      <li><a class="dropdown-item" href="{{route('customers.create')}}">
+                        <span data-feather="user-plus"></span>
+                        Adicionar Cliente
                       </a></li>
                     </ul>
         

@@ -33,6 +33,7 @@ class Customer extends Model
         {
             $this->attributes["IDTIPO"] = "PF";
         }
+
     }
 
     //===============Geração GUID ===========================
