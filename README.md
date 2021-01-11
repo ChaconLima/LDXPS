@@ -11,7 +11,7 @@
 
     cp .env.example .env
     
-3 - Configurar o Projeto no arquivo .env
+3 - Configurar o projeto no arquivo .env
 
     APP_NAME=Laravel
     APP_ENV=local
