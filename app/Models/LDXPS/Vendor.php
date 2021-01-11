@@ -19,10 +19,16 @@ class Vendor extends Model
     protected $fillable = [
         'DSNOME',
         'CDTAB',
+        'DTNASC',
         'created_at',
         'updated_at',
     ];
-
+    //============= transformação da data =================
+    public function setDTNASCAttribute($value)
+    {
+        $this->attributes["DTNASC"] =date('Y-m-d H:i:s',strtotime($value));
+    }
+    //============= Geração GUID=================
     protected $guarded = [];
     protected static function boot()
     {

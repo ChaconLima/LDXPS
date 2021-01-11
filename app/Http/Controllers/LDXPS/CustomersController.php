@@ -84,8 +84,4 @@ class CustomersController extends Controller
     {
         
     }
-    public function destroyRouteVendor($id)
-    {
-        
-    }
 }

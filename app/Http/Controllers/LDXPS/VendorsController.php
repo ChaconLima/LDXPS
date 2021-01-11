@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\LDXPS;
 
+use Carbon\Carbon;
 use App\Http\Controllers\Controller;
 use App\Models\LDXPS\Vendor;
 use Illuminate\Http\Request;
@@ -28,7 +29,7 @@ class VendorsController extends Controller
      */
     public function create()
     {
-        //
+        return view('LDXPS.vendors.registration');
     }
 
     /**
@@ -39,7 +40,16 @@ class VendorsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $vendor = $request->validate([
+            'DSNOME' => ['required', 'max:50'],
+            'CDTAB' => 'required',
+            'DTNASC' => 'required'
+        ]);
+
+        Vendor::create($vendor);
+
+        return redirect()->route('vendors.index')
+            ->with('success', 'Vendedor Criado com Sucesso.');
     }
 
     /**
@@ -64,7 +74,10 @@ class VendorsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $vendor=Vendor::find($id);
+        $customers = $vendor->customers()->paginate(3);
+
+        return view('LDXPS.vendors.update', compact(['vendor','customers']))->with('i', (request()->input('page', 1) - 1) * 3);
     }
 
     /**
@@ -76,7 +89,16 @@ class VendorsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $vendor = $request->validate([
+            'DSNOME' => ['required', 'max:50'],
+            'CDTAB' => 'required',
+            'DTNASC' => 'required'
+        ]);
+        
+        Vendor::find($id)->update($vendor);
+
+        return redirect()->route('vendors.index')
+            ->with('success', 'Vendedor Alterado com sucesso');
     }
 
     /**
@@ -87,12 +109,18 @@ class VendorsController extends Controller
      */
     public function destroy($id)
     {
-        try {
-            Vendor::find($id)->delete();
-            return redirect()->route('vendors.index')->with('success', 'Vendedor Deletado Com Sucesso');
+            $vendor=Vendor::find($id);
+            $customers = $vendor->customers()->get();
 
-        } catch (Exception $e) {
-            return redirect()->route('vendors.index')->with('error','CDVEND');
-        }
+            foreach($customers as $customer){
+
+                $data = Customer::find($customer->CDCL);
+                $data->CDVEND = "";
+                $data->save();
+
+            }
+
+            $vendor->delete();
+            return redirect()->route('vendors.index')->with('success', 'Vendedor Deletado Com Sucesso');
     }
 }

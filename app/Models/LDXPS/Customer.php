@@ -20,6 +20,7 @@ class Customer extends Model
         'DSNOME',
         'IDTIPO',
         'DSLIM',
+        'CDVEND',
         'created_at',
         'updated_at',
     ];

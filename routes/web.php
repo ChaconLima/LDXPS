@@ -23,6 +23,4 @@ Route::get('/home', function () {
 })->name('home');
 
 Route::resource('/customers', CustomersController::class);
-Route::delete('/customer/{id}',[CustomersController::class,'destroyRouteVendor'])->name('customers.destroyRouteVendor');
-
 Route::resource('/vendors', VendorsController::class);

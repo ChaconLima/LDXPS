@@ -14,13 +14,19 @@ const mix = require('laravel-mix');
 mix
     .styles(
         [
-            'resources/views/LDXPS/layout/css/style.css' 
+            'resources/views/LDXPS/layout/css/page.css' 
         ],
-        'public/LDXPS/css/styleCss.css'
+        'public/LDXPS/css/pageCss.css'
+    )
+    .styles(
+        [
+            'resources/views/LDXPS/layout/css/form.css' 
+        ],
+        'public/LDXPS/css/formCss.css'
     )
     .sass   (
-        'resources/views/LDXPS/layout/scss/styleCuston.scss',
-        'public/LDXPS/css/styleSass.css'
+        'resources/views/LDXPS/layout/scss/pageCuston.scss',
+        'public/LDXPS/css/pageSass.css'
     )
     .scripts(
         'node_modules/jquery/dist/jquery.js',   
@@ -36,8 +42,14 @@ mix
     )  
     .scripts(
         [
-            'resources/views/LDXPS/layout/js/script.js',
+            'resources/views/LDXPS/layout/js/page.js',
         ],
-        'public/LDXPS/js/scripts.js'
-    )  
+        'public/LDXPS/js/page.js'
+    ) 
+        .scripts(
+        [
+            'resources/views/LDXPS/layout/js/form.js',
+        ],
+        'public/LDXPS/js/form.js'
+    ) 
     .version();
