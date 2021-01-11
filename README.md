@@ -11,7 +11,7 @@
 
     cp .env.example .env
     
-3 - Configurar o Projeto no arquivo .env
+3 - Configurar o projeto no arquivo .env
 
     APP_NAME=Laravel
     APP_ENV=local
@@ -32,7 +32,7 @@
     
     php artisan migrate
 
-6 - Passo opcional, que gerar informações "fakes", para abastercer as tabelas do banco de dados:
+6 - Passo opcional, que é gerar informações "fakes", para abastercer as tabelas do banco de dados:
 
     php artisan db:seed
 
